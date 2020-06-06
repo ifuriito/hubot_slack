@@ -28,4 +28,14 @@ function isNotDone(taskAndIsDonePair) {
   return !isDone(taskAndIsDonePair);
 }
 
+/**
+* TODOの一覧の配列を取得する
+* @return {array}
+*/
+function list() {
+  return Array.from(tasks)
+    .filter(isNotDone)
+    .map(t => t[0]);
+}
+
 module.exports = { todo };
