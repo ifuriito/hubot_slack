@@ -19,4 +19,13 @@ function isDone(taskAndIsDonePair) {
   return taskAndIsDonePair[1];
 }
 
+/**
+* タスクと完了したかどうかが含まれる配列を受け取り、完了していないかを返す
+* @param {array} taskAndIsDonePair
+* @return {boolean} 完了していないかどうか
+*/
+function isNotDone(taskAndIsDonePair) {
+  return !isDone(taskAndIsDonePair);
+}
+
 module.exports = { todo };
